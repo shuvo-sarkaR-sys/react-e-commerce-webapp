@@ -4,15 +4,15 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import Category from './components/Category/Category'
-
+import Home from './Home/Home'
+ 
 function App() {
   
   return (
     <>
      <Navbar/>
      <Hero/>
-     <Category/>
+      <Home/>
     </>
   )
 }
