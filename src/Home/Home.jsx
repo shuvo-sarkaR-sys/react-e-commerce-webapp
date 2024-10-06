@@ -1,12 +1,20 @@
 import React, { useState } from 'react'
 import Category from '../components/Category/Category'
-import Product_lish from '../components/Product_lish'
-const [categories, setCategories] = useState("")
+ import Product_list from '../components/Product_list'
+ 
+import Hero from '../components/Hero'
+import Footer from '../Footer/Footer'
+ 
 const Home = () => {
+  const [categories, setCategories] = useState("all")
+  console.log(categories)
   return (
     <div>
+       
+      <Hero/>
       <Category categories={categories} setCategories={setCategories} />
-      <Product_lish categories={categories}   />
+      <Product_list categories={categories}   />
+<Footer/>
     </div>
   )
 }

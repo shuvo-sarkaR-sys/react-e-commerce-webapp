@@ -16,20 +16,22 @@ import { searchContext } from './Context/Context'
 function App() {
   const [searchvalue, setSearchValue] = useState("")
   const [searchBtn, setSearchBtn] = useState('')
-   
+   const [logIn, setLogIn] = useState(false)
  
   const [cart, setCart] = useState([])
   return (
     <>
-    <searchContext.Provider value={{searchvalue, setSearchValue, searchBtn, setSearchBtn}}>
-    <cartOpt.Provider value={{cart, setCart}}>
+   
+    <searchContext.Provider value={{logIn, setLogIn, searchvalue, setSearchValue, searchBtn, setSearchBtn}}> 
+      {logIn ? <LogIn/>: <></>}
+    <cartOpt.Provider value={{cart, setCart, }}>
     <BrowserRouter>
      <Navbar/>
     <Routes>
       <Route path='/' element={<Home/>}/>
      <Route path='home'   element={<Hero/>}/>
      <Route path='Cart' element={<Cart/>} />
-     <Route path='LogIn' element={<LogIn/>}/>
+      
      <Route path='contact' element={<Footer/>} />
      <Route path='search' element={<Search/>}/>
       </Routes>
