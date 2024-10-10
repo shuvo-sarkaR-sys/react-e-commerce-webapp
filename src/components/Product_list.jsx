@@ -59,7 +59,7 @@ setWish((prevWish)=>{
     <div className='flex   flex-wrap mt-10 md:gap-[90px] gap-8 md:mx-[100px]  justify-center'>
     {
         filteredProducts.map((item, index)=>
-        <div onClick={()=>showProduct(item)} key={index} className="border-2 rounded-md md:w-64 md:h-[310px] p-3">
+        <div onClick={()=>showProduct(item)} id={item.id} key={index} className="border-2 rounded-md md:w-64 md:h-[310px] p-3">
           <Link to='productDetails' ><img className='md:w-54 m-auto md:h-[190px]' src={item.product_image} alt="" /></Link>
         <div className='flex justify-between mt-2'>
          <p>{item.product_name}</p>

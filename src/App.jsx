@@ -41,6 +41,7 @@ function App() {
      <Route path='search' element={<Search/>}/>
      <Route path='productDetails' element={<ProductDe/>}/>
      <Route path="wishList" element={<AddToWish/>}/>
+     
       </Routes>
     </BrowserRouter>
     </cartOpt.Provider>

@@ -14,35 +14,35 @@ const Hero = () => {
 <div className='flex  flex-wrap  mt-5 gap-4 justify-center'>
     <div className="w-[400px] h-[180px] sm:w-[600px] md:w-[900px] md:h-[450px]">
       <Carousel>
-        <img className='w-[400px] sm:w-[800px] h-[180px] md:w-[900px] md:h-[450px]' src={theme1} alt="" />
-        <img  className='w-[400px] sm:w-[800px] h-[180px] md:w-[900px] md:h-[450px]' src={theme2} alt="" />
-        <img className='w-[400px] sm:w-[800px] h-[180px] md:w-[900px] md:h-[450px]' src={theme3} alt="" />
+       <div><a href="#4"> <img className='w-[400px] sm:w-[800px] h-[180px] md:w-[900px] md:h-[450px]' src={theme1} alt="" /></a></div>
+       <div><a href="#21"> <img  className='w-[400px] sm:w-[800px] h-[180px] md:w-[900px] md:h-[450px]' src={theme2} alt="" /></a></div>
+       <div><a href="#30"><img className='w-[400px] sm:w-[800px] h-[180px] md:w-[900px] md:h-[450px]' src={theme3} alt="" /></a></div> 
        
       </Carousel>
     </div>
 <div>
   <h1 className='text-2xl'>Gaming Product</h1> 
   <div className='flex gap-3'>
-<div>
+<a href="#1"><div>
 <img className='rounded-md' src={p1} alt="" />
 <h1>PC gaming</h1>
-</div>
-<div>
+</div></a>
+<a href="#10"><div>
   <img className='rounded-md' src={p2} alt="" />
   <h1>Xbox</h1>
-</div>
+</div></a>
 </div>
 <br />
 <div className='flex gap-3'>
-<div>
+<a href="#5"><div>
   <img className='rounded-md' src={p3} alt="" />
   <h1>PlayStation</h1>
-</div>
-<div>
+</div></a>
+<a href="#8"><div>
   <img className='rounded-md' src={p4} alt="" />
   <h1>Nentendo switch</h1>
 </div>
- 
+ </a>
  </div>
 </div>
  
