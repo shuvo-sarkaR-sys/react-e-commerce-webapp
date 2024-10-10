@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { cartOpt } from '../Context/Context';
 import cross from '../assets/cross-button.png'
+import emptyCartImg from '../assets/shopping.png'
 const Cart = () => {
   const { cart, setCart } = useContext(cartOpt);
   console.log(cart);
@@ -21,7 +22,7 @@ const Cart = () => {
    }
   return (
     <div> 
-      <div className='md:w-[800px] md:min-h-[250px] m-auto border-2 my-10 pt-2'>
+      <div className='md:w-[800px] md:min-h-[250px] m-auto border-2 my-10 pt-2 rounded-md'>
       <div className='grid grid-cols-4 gap-8 md:gap-36 mx-7'>
               <p>Image</p>
               <p>Product details</p>
@@ -29,7 +30,7 @@ const Cart = () => {
               <p>Price</p>
             </div>
       {!cart || cart.length === 0 ? (
-        <p className='text-4xl text-center mt-10' >Cart is empty</p>
+        <><p className='text-4xl text-center mt-10'>Cart is empty</p><img className='md:w-64 mx-auto mt-5' src={emptyCartImg} alt="" /></>
       ) : (
         cart.map((item) => (
           <div key={item.id} className='grid grid-cols-4 gap-8 md:gap-36 mt-7 mx-5'>

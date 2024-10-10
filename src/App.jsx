@@ -13,18 +13,23 @@ import Footer from './Footer/Footer'
 import Search from './components/Search'
 
 import { searchContext } from './Context/Context'
+import ProductDe from './Product details/ProductDe'
+import AddToWish from './WishList/AddToWish'
 function App() {
   const [searchvalue, setSearchValue] = useState("")
   const [searchBtn, setSearchBtn] = useState('')
    const [logIn, setLogIn] = useState(false)
  
   const [cart, setCart] = useState([])
+  const [productDetail, setProductdDetail] = useState(null)
+  const [wish, setWish] = useState([])
+  const [text, setText] = useState(false)
   return (
     <>
    
     <searchContext.Provider value={{logIn, setLogIn, searchvalue, setSearchValue, searchBtn, setSearchBtn}}> 
       {logIn ? <LogIn/>: <></>}
-    <cartOpt.Provider value={{cart, setCart, }}>
+    <cartOpt.Provider value={{ text, setText, cart, setCart, wish, setWish, productDetail, setProductdDetail,  }}>
     <BrowserRouter>
      <Navbar/>
     <Routes>
@@ -34,6 +39,8 @@ function App() {
       
      <Route path='contact' element={<Footer/>} />
      <Route path='search' element={<Search/>}/>
+     <Route path='productDetails' element={<ProductDe/>}/>
+     <Route path="wishList" element={<AddToWish/>}/>
       </Routes>
     </BrowserRouter>
     </cartOpt.Provider>
