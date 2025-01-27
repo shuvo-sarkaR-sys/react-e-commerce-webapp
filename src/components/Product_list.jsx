@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
  
  
 const Product_list = ({categories}) => {
-    const {  setText,setWish, setCart, setProductdDetail} = useContext(cartOpt)
+    const {  setText,setWish, setCart, setProductDetail} = useContext(cartOpt)
     
 const [cartText, setCartText] = useState(false)
     const addtoCart = (props)=>{
@@ -28,7 +28,7 @@ setCartText(true)
 
 }
   const showProduct = (props)=>{
-    setProductdDetail(props)
+    setProductDetail(props)
    
   }
    
@@ -56,10 +56,10 @@ setWish((prevWish)=>{
  
 
   return (
-    <div className='flex   flex-wrap mt-10 md:gap-[90px] gap-8 md:mx-[100px]  justify-center'>
+    <div className='flex   flex-wrap mt-10 xl:gap-[90px] sm:gap-8 gap-4 xl:mx-[100px]  justify-center'>
     {
         filteredProducts.map((item, index)=>
-        <div onClick={()=>showProduct(item)} id={item.id} key={index} className="border-2 rounded-md md:w-64 md:h-[310px] p-3">
+        <div onClick={()=>showProduct(item)} id={item.id} key={index} className="border-2 rounded-md md:w-64 w-[48%] md:h-[310px] p-3">
           <Link to='productDetails' ><img className='md:w-54 m-auto md:h-[190px]' src={item.product_image} alt="" /></Link>
         <div className='flex justify-between mt-2'>
          <p>{item.product_name}</p>

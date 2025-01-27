@@ -4,7 +4,7 @@ import youtubeImg from '../assets/youtube.png'
 import twitterImg from '../assets/twitter (1).png'
 const Footer = () => {
   return (
-    <div className='bg-[#071520] md:h-[450px]   mt-10 pl-2 md:px-20' >
+    <div className='bg-[#071520] xl:h-[450px]   mt-10 pl-2 md:px-20' >
       <h1 className='text-orange-400 font-bold text-3xl pt-5'>SARKAR</h1>
       <br />
       <p className='text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio at qui nemo doloremque necessitatibus adipisci minus dolorum sit odio quidem? Fugit consequuntur ipsa repudiandae voluptatum distinctio. Magnam quasi cupiditate est.</p>
@@ -34,7 +34,7 @@ const Footer = () => {
       </div>
       <br />
       <hr />
-      <p className="text-center text-white my-3 pb-3">Copyright 2024 all rigth</p>
+      <p className="text-center text-white my-3 pb-3">Copyright 2024 all right</p>
     </div>
   )
 }

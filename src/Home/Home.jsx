@@ -32,7 +32,7 @@ const Home = () => {
       <img className='w-8' src={Love} alt="" />
       </div></Link>
       {text && <div className='fixed  bottom-40 left-[100px] md:left-[650px] bg-backdrop-blur'><p className='bg-blue-100 rounded-md p-1  text-center'>add to wish list successfully</p></div>}
-<Footer/>
+ 
     </div>
   )
 }

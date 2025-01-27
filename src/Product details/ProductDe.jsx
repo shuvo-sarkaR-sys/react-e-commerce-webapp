@@ -1,11 +1,31 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { cartOpt } from '../Context/Context'
- 
+import { Carousel } from "flowbite-react";
 import love from '../assets/heart.png'
+import { use } from 'react'
 const ProductDe = () => {
-    const { setWish,setCart, productDetail} = useContext(cartOpt)
+    const { setWish,setCart, productDetail, setProductDetail} = useContext(cartOpt)
     const [cartText, setCartText] = useState(false)
     const [wishText, setWishText] = useState(false)
+   
+    useEffect(() => {
+      if (productDetail) {
+        localStorage.setItem('productDetail', JSON.stringify(productDetail));
+      }
+    }, [productDetail]);
+  
+    // Retrieve productDetail from localStorage on component mount
+    useEffect(() => {
+      const savedProduct = localStorage.getItem('productDetail');
+      if (savedProduct) {
+        setProductDetail(JSON.parse(savedProduct)); // Fixed the typo here
+      }
+    }, [setProductDetail]);
+  
+    if (!productDetail) {
+      return <p>Loading product details...</p>;
+    }
+
     const addToCart = (props)=>{
       setCart((prevCart)=>{
         const existingItem = prevCart.find((item)=>item.id===props.id)
@@ -39,10 +59,12 @@ const ProductDe = () => {
     }
 
 
+     
+
   return (
     <div>
        
-    <div className='flex md:gap-28 mt-28 md:ml-52'>
+    <div className='flex md:gap-28 mt-28 xl:ml-48'>
      <div><img className='w-[400px]' src={productDetail.product_image} alt="" /></div> 
      <div>
       <p className='md:text-4xl'>{productDetail.product_name}</p>

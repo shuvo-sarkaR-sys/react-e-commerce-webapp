@@ -86,7 +86,7 @@ export const product_list = [
       },
       {
         id: 4,
-        product_name: 'MSI',
+        product_name: 'MSI Laptop',
         product_image: l5,
         product_price: 499,
         category: 'Laptop'

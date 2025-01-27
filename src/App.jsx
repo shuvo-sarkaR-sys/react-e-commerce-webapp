@@ -21,7 +21,7 @@ function App() {
    const [logIn, setLogIn] = useState(false)
  
   const [cart, setCart] = useState([])
-  const [productDetail, setProductdDetail] = useState(null)
+  const [productDetail, setProductDetail] = useState(null)
   const [wish, setWish] = useState([])
   const [text, setText] = useState(false)
   return (
@@ -29,7 +29,7 @@ function App() {
    
     <searchContext.Provider value={{logIn, setLogIn, searchvalue, setSearchValue, searchBtn, setSearchBtn}}> 
       {logIn ? <LogIn/>: <></>}
-    <cartOpt.Provider value={{ text, setText, cart, setCart, wish, setWish, productDetail, setProductdDetail,  }}>
+    <cartOpt.Provider value={{ text, setText, cart, setCart, wish, setWish, productDetail, setProductDetail,  }}>
     <BrowserRouter>
      <Navbar/>
     <Routes>
@@ -46,6 +46,7 @@ function App() {
     </BrowserRouter>
     </cartOpt.Provider>
     </searchContext.Provider>
+    <Footer/>
     </>
   )
 }

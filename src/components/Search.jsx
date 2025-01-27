@@ -5,7 +5,7 @@ import heart from '../assets/heart.png'
 import order from '../assets/order.png'
 import { cartOpt } from '../Context/Context'
 const Search = () => {
-  const {cart, setCart} = useContext(cartOpt)
+  const {setCart} = useContext(cartOpt)
   const addtoCart = (props)=>{
     setCart((prevCart)=>{
       const existingItem = prevCart.find((item)=>item.id===props.id)
@@ -20,8 +20,7 @@ const Search = () => {
     
  const {searchBtn} = useContext(searchContext)
  const [searchProduct, setSearchProduct] = useState([])
- console.log(searchProduct)
- console.log(searchBtn)
+  
    useEffect(()=>{
     if(searchBtn.length > 0){
       const filteredItems = product_list.filter((item)=> item.product_name.toLowerCase().includes(searchBtn.toLowerCase()))

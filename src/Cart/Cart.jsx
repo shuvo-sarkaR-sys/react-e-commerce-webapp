@@ -4,11 +4,11 @@ import cross from '../assets/cross-button.png'
 import emptyCartImg from '../assets/shopping.png'
 const Cart = () => {
   const { cart, setCart } = useContext(cartOpt);
-  console.log(cart);
+ 
  
   
     const totals =  cart.reduce((total, item)=> total + Number(item.product_price) * item.quantity, 0)
-   console.log(totals)
+    
 
 
    const handleCancel = (item)=>{
@@ -22,8 +22,8 @@ const Cart = () => {
    }
   return (
     <div> 
-      <div className='md:w-[800px] md:min-h-[250px] m-auto border-2 my-10 pt-2 rounded-md'>
-      <div className='grid grid-cols-4 gap-8 md:gap-36 mx-7'>
+      <div className='xl:w-[800px] md:h-[65vh] mx-5  h-[40vh] md:mx-20 xl:mx-32 xl:min-h-[250px] m-auto border-2 my-10 pt-2 rounded-md'>
+      <div className='grid grid-cols-4 gap-8 md:gap-24 lg:gap-36 mx-7'>
               <p>Image</p>
               <p>Product details</p>
               <p>Quantity</p>
@@ -33,12 +33,12 @@ const Cart = () => {
         <><p className='text-4xl text-center mt-10'>Cart is empty</p><img className='md:w-64 mx-auto mt-5' src={emptyCartImg} alt="" /></>
       ) : (
         cart.map((item) => (
-          <div key={item.id} className='grid grid-cols-4 gap-8 md:gap-36 mt-7 mx-5'>
+          <div key={item.id} className='grid grid-cols-4 gap-8 lg:gap-36 md:gap-24 mt-7 mx-5'>
            
             <img className="w-24" src={item.product_image} alt={item.product_name} />
             <p className=''>{item.product_name}</p>
             <p className=''>{item.quantity}</p>
-           <span className='flex gap-5 text-center'><p>{item.product_price} </p><div  onClick={()=>handleCancel(item)}><img  src={cross} alt="" /></div></span> 
+           <span className='flex gap-5 text-center'><p>{item.product_price} </p><div  onClick={()=>handleCancel(item)}><img   src={cross} alt="" /></div></span> 
           
           </div>
           
