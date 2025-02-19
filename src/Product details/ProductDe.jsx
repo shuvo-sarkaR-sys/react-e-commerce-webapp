@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { cartOpt } from '../Context/Context'
 import { Carousel } from "flowbite-react";
 import love from '../assets/heart.png'
-import { use } from 'react'
+ 
 const ProductDe = () => {
     const { setWish,setCart, productDetail, setProductDetail} = useContext(cartOpt)
     const [cartText, setCartText] = useState(false)
